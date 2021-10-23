@@ -1,0 +1,19 @@
+ATP,         !MPT
+BAX,         !BCL2&CASP8
+BCL2,        NFkB
+CASP3,       !XIAP&apoptosome
+CASP8,       !cFLIP | !cFLIP | CASP3&!cFLIP
+Cyt_c,       MOMP
+IKK,         RIP1ub
+MOMP,        MPT | BAX
+MPT,         !BCL2&ROS
+NFkB,        !CASP3&IKK
+RIP1,        !CASP8 | !CASP8
+RIP1K,       RIP1
+RIP1ub,      RIP1&cIAP
+ROS,         !NFkB&RIP1K | MPT&!NFkB
+SMAC,        MOMP
+XIAP,        NFkB&!SMAC
+apoptosome,  ATP&Cyt_c&!XIAP
+cFLIP,       NFkB
+cIAP,        !SMAC&cIAP | NFkB&!SMAC

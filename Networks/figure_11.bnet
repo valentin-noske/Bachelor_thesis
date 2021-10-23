@@ -1,0 +1,23 @@
+# model in BoolNet format
+# the header targets, factors is mandatory to be importable in the R package BoolNet
+
+targets, factors
+BCL2,       NFkB
+CASP8,      !DISC_FAS&!DISC_TNF&!XIAP&apoptosome&!cFLIP | !DISC_FAS&DISC_TNF&!cFLIP | DISC_FAS&!cFLIP
+DISC_FAS,   FADD&FASL
+DISC_TNF,   FADD&TNF
+FADD,       FADD
+FASL,       FASL
+IKK,        RIP1ub
+MOMP,       !BCL2&!CASP8&ROS | !BCL2&CASP8
+NFkB,       IKK&!XIAP&!apoptosome | IKK&XIAP
+RIP1,       !CASP8&!DISC_FAS&TNF | !CASP8&DISC_FAS
+RIP1K,      RIP1
+RIP1ub,     RIP1&cIAP
+ROS,        !BCL2&!NFkB&!RIP1K&ROS | !BCL2&!NFkB&RIP1K | BCL2&!NFkB&RIP1K
+Survival,   NFkB
+TNF,        TNF
+XIAP,       !MOMP&NFkB
+apoptosome, !BCL2&MOMP&!ROS&!XIAP | BCL2&MOMP&!XIAP
+cFLIP,      NFkB
+cIAP,       !MOMP&!NFkB&cIAP | !MOMP&NFkB
